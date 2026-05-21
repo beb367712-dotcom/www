@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BETSEGAW</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="STYLE.CSS">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#00dbe9",
+                      "surface-container-low": "#0d1c2d",
+                      "surface-container-highest": "#273647",
+                      "on-primary-fixed": "#002022",
+                      "tertiary": "#f8f4ff",
+                      "outline-variant": "#3b494b",
+                      "surface-container-high": "#1c2b3c",
+                      "on-surface": "#d4e4fa",
+                      "on-background": "#d4e4fa",
+                      "secondary-fixed-dim": "#ecb2ff",
+                      "inverse-surface": "#d4e4fa",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed": "#1b1b23",
+                      "secondary": "#ecb2ff",
+                      "surface-container-lowest": "#010f1f",
+                      "on-primary-container": "#006970",
+                      "on-primary-fixed-variant": "#004f54",
+                      "tertiary-container": "#dbd8e4",
+                      "surface-tint": "#00dbe9",
+                      "surface-variant": "#273647",
+                      "on-secondary-fixed-variant": "#74009f",
+                      "on-primary": "#00363a",
+                      "surface-dim": "#051424",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed-dim": "#c7c5d0",
+                      "background": "#051424",
+                      "secondary-container": "#cf5cff",
+                      "surface-bright": "#2c3a4c",
+                      "on-secondary-container": "#480063",
+                      "inverse-primary": "#006970",
+                      "on-tertiary-container": "#5f5e68",
+                      "secondary-fixed": "#f8d8ff",
+                      "primary-container": "#00f0ff",
+                      "tertiary-fixed": "#e4e1ed",
+                      "primary-fixed": "#7df4ff",
+                      "on-tertiary-fixed-variant": "#46464f",
+                      "on-error": "#690005",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#122131",
+                      "inverse-on-surface": "#233143",
+                      "surface": "#051424",
+                      "on-tertiary": "#303038",
+                      "on-secondary-fixed": "#320047",
+                      "on-secondary": "#520071",
+                      "primary": "#dbfcff",
+                      "outline": "#849495",
+                      "on-surface-variant": "#b9cacb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "section-gap": "120px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Geist"],
+                      "body-lg": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "display-lg": ["Geist"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Geist"],
+                      "label-code": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "label-code": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed-dim/30 selection:text-primary-fixed-dim">
+<!-- Interactive Particle Background -->
+<canvas id="particle-canvas"></canvas>
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-surface-container/40 backdrop-blur-xl border-b border-white/10">
+<nav class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-16">
+<div class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary-fixed-dim">WSU_DEV://BETSEGAW</div>
+<div class="hidden md:flex items-center gap-8 font-label-code text-label-code">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 px-3 py-1 rounded" href="beew.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 px-3 py-1 rounded" href="about.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 px-3 py-1 rounded" href="projects.html">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 px-3 py-1 rounded" href="contact.html">Contact</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 px-3 py-1 rounded" href="skills.html">Skills</a>
+</div>
+<button id="theme-toggle" class="active:scale-95 transition-transform p-2 rounded-full hover:bg-white/5">
+  <span class="material-symbols-outlined text-primary-fixed-dim" data-icon="dark_mode">
+    dark_mode
+  </span>
+</button>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<!-- Hero Section -->
+<section id="home" class="min-h-[calc(100vh-64px)] flex flex-col md:flex-row items-center justify-center gap-12 py-12 md:py-0">
+<div class="flex-1 space-y-6 reveal">
+<div class="inline-block px-3 py-1 glass-panel border-primary-fixed-dim/20 rounded-full text-primary-fixed-dim font-label-code text-label-code uppercase tracking-widest">
+                Available for Work 2026
+            </div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-none">
+                BETSEGAW<br/>
+<span class="text-primary-fixed-dim typing-cursor" id="typing-text"></span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                I am a passionate software developer and student at <span class="text-primary">Wolaita Sodo University</span>. I build high-performance C++ applications and modern web ecosystems using cutting-edge technologies.
+            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="px-8 py-4 bg-gradient-to-r from-primary-fixed-dim to-secondary-container text-on-primary-fixed font-label-caps text-label-caps rounded-lg hover:scale-105 transition-transform glow-cyan" href="projects.html">
+                    VIEW PROJECTS
+                </a>
+<a class="px-8 py-4 glass-panel border-primary-fixed-dim/50 text-primary-fixed-dim font-label-caps text-label-caps rounded-lg hover:bg-primary-fixed-dim/10 transition-all" href="contact.html">
+                    CONTACT ME
+                </a>
+</div>
+</div>
+<div class="flex-1 relative group reveal">
+<div class="absolute -inset-4 bg-gradient-to-r from-primary-fixed-dim/20 to-secondary-container/20 rounded-full blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
+<div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-primary-fixed-dim/30 glass-edge animate-float">
+<img alt="Alemayehu - Software Engineering Student" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="bets.jpg"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/30 w-full py-8 mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-4 font-label-code text-label-code">
+<div class="font-label-caps text-label-caps text-on-surface">© 2026 WOLAYTA SODO UNIVERSITY // DEV_PORTFOLIO</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all hover:translate-y-[-2px]" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-all hover:translate-y-[-2px]" href="#">LinkedIn</a>
+</div>
+<div class="text-primary-fixed-dim">V2.5.0_ENHANCED</div>
+</div>
+</footer>
+<script src="script.js" defer></script>
+</body></html>
